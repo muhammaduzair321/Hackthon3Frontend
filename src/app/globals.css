@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  @apply text-4xl;
+  @apply font-bold;
+}
+h2 {
+  @apply text-3xl;
+  @apply font-bold;
+}
+h3 {
+  @apply text-2xl;
+  @apply font-bold;
+}
+h4 {
+  @apply text-xl;
+  @apply font-semibold;
+}
+h5 {
+  @apply text-lg;
+  @apply font-semibold;
+}
+h6 {
+  @apply text-sm;
+  @apply font-semibold;
+}
+
+.btn-primary{@apply px-4 text-white py-2 rounded-lg hover:text-white hover:shadow-lg hover:transition-all}
+.btn-secondary{@apply  rounded-md border border-gray-300 hover:border-gray-300 bg-white px-4 py-2  text-sm font-medium text-gray-500 hover:bg-gray-50  dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300 }
+
+
+.btn-danger{@apply px-4 bg-red-700 text-white py-2 rounded-lg hover:text-white hover:shadow-lg hover:transition-all}
+
+.multi-color-border {
+    border-left: 2px solid transparent;
+    border-right:2px solid transparent ;
+    border-image: linear-gradient(to top, #1877F2, #1DA1F2, #E1306C, #0A66C2, #333);
+    border-image-slice: 1;
+  }
+
+  .code-wrapper {
+    white-space: normal; /* Reset the white-space property */
+    word-wrap: break-word; /* Allow long words to be broken and wrap */
+  }
+
+
+
+  .loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #000;
+  }
+    .loader:before,
+    .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
